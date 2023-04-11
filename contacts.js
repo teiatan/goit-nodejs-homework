@@ -18,7 +18,8 @@ async function listContacts() {
   };
   
   function addContact(name, email, phone) {
-    // ...твой код
+    const contact = { name, email, phone }
+    fs.appendFile(contactsPath, contact);
   };
 
   function test() {
