@@ -19,7 +19,7 @@ async function invokeAction({ action, id, name, email, phone }) {
         break;
 
     case "add":
-      // ... name email phone
+        await addContact(name, email, phone);
       break;
 
     case "remove":
@@ -33,4 +33,5 @@ async function invokeAction({ action, id, name, email, phone }) {
 
 //invokeAction(argv);
 //invokeAction({action: "list"});
-invokeAction({action: "get", id: "Z5sbDlS7pCzNsnAHLtDJd"});
+//invokeAction({action: "get", id: "Z5sbDlS7pCzNsnAHLtDJd"});
+//invokeAction({action: "add", name: "Tanya Protas", email: "protas.tb@gmail.com", phone: "+380991344544"});
