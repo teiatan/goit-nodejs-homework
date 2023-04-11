@@ -1,14 +1,12 @@
-/*
- * Раскомментируй и запиши значение
- * const contactsPath = ;
- */
+const fs = require("fs/promises");
+const path = require("path");
 
-// TODO: задокументировать каждую функцию
-
+const contactsPath = path.join(__dirname, "./db/contacts.json");
 const contacts = require("./db/contacts.json");
 
-function listContacts() {
-    // ...твой код
+async function listContacts() {
+    const data = await fs.readFile(contactsPath, "utf-8");
+    console.log(JSON.parse(data));
   };
   
   function getContactById(contactId) {
