@@ -19,12 +19,12 @@ async function invokeAction({ action, id, name, email, phone }) {
         break;
 
     case "add":
-        await addContact(name, email, phone);
-      break;
+        addContact(name, email, phone);
+        break;
 
     case "remove":
-      // ... id
-      break;
+        removeContact(id)
+        break;
 
     default:
       console.warn("\x1B[31m Unknown action type!");
@@ -35,3 +35,4 @@ async function invokeAction({ action, id, name, email, phone }) {
 //invokeAction({action: "list"});
 //invokeAction({action: "get", id: "Z5sbDlS7pCzNsnAHLtDJd"});
 //invokeAction({action: "add", name: "Tanya Protas", email: "protas.tb@gmail.com", phone: "+380991344544"});
+invokeAction({action: "remove", id: "e6ywwRe4jcqxXfCZOj_1e"});

@@ -15,8 +15,10 @@ async function getContactById(contactId) {
     return oneContact || null;
   };
   
-  function removeContact(contactId) {
-    // ...твой код
+async function removeContact(contactId) {
+    const allContacts = await listContacts();
+    const newContactsList = allContacts.filter(contact => contact.id !== contactId);
+    fs.writeFile(contactsPath, JSON.stringify(newContactsList));
   };
   
 async function addContact(name, email, phone) {
