@@ -25,19 +25,6 @@ async function removeContact(contactId) {
     const newContactsList = allContacts.filter(contact => contact.id !== contactId);
     fs.writeFile(contactsPath, JSON.stringify(newContactsList, null, 2));
     return deletedContact;
-
-
-    /* 
-    альтернативне видалення використовуючи фільтр
-    
-    const deletedContact = await getContactById(contactId);
-    if(!deletedContact) {
-      return null;
-    };
-    const allContacts = await listContacts();
-    const newContactsList = allContacts.filter(contact => contact.id !== contactId);
-    fs.writeFile(contactsPath, JSON.stringify(newContactsList, null, 2));
-    return deletedContact; */
   };
   
 async function addContact(name, email, phone) {
