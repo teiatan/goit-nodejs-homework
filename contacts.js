@@ -28,5 +28,9 @@ function listContacts() {
   }
 
 module.exports = {
-    test
+    test,
+    listContacts,
+    getContactById,
+    removeContact,
+    addContact
 }
