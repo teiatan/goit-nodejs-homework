@@ -7,12 +7,14 @@ node index.js --action list
 
 ## Get contact by id
 node index.js --action get --id 05olLMgyVQdWRwgKfg5J6
-[see result]()
+
+![Screenshot of getting contact by id.](https://i.ibb.co/6sJVpZd/3.png)
 
 ## Add the contact
 node index.js --action add --name Mango --email mango@gmail.com --phone 322-22-22
-[see result]()
+![Screenshot of adding new contact](https://i.ibb.co/NnQ9Rv9/4.png)
 
 ## Delete the contact
 node index.js --action remove --id qdggE76Jtbfd9eWJHrssH
-[see result]()
+
+![Screenshot of deleting contact](https://i.ibb.co/tCzMhwV/5.png)
