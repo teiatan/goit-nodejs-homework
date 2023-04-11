@@ -4,12 +4,14 @@ const path = require("path");
 const contactsPath = path.join(__dirname, "./db/contacts.json");
 
 async function listContacts() {
-    const data = await fs.readFile(contactsPath);
-    return JSON.parse(data);
+    const allContacts = await fs.readFile(contactsPath);
+    return JSON.parse(allContacts);
   };
   
-  function getContactById(contactId) {
-    // ...твой код
+async function getContactById(contactId) {
+    const allContacts = await listContacts();
+    const oneContact = allContacts.find(contact => contact.id === contactId);
+    return oneContact;
   };
   
   function removeContact(contactId) {
